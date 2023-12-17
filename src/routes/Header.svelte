@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+
 	import HeaderItem from './HeaderItem.svelte';
 </script>
 
@@ -19,8 +18,8 @@
 			<li aria-current={$page.url.pathname === '/fractal_lines' ? 'page' : undefined}>
 				<a href="/fractal_lines">Fractal Lines</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/islands') ? 'page' : undefined}>
-				<a href="/islands">Waves</a>
+			<li aria-current={$page.url.pathname.startsWith('/waves') ? 'page' : undefined}>
+				<a href="/waves">Waves</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/image') ? 'page' : undefined}>
 				<a href="/image">Image</a>
@@ -47,20 +46,6 @@
 	.corner {
 		width: 3em;
 		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
 	}
 
 	nav {

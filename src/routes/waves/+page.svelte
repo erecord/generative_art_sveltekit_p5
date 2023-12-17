@@ -9,13 +9,11 @@
 	$: invalidateSketch && invalidateSketch(amplitude, heightCutOff, useTriangularMode);
 	let color = '#116195';
 	let heightCutOff = 5;
-	// $: invalidateSketch && invalidateSketch(heightCutOff);
 	let useTriangularMode = false;
 	let lines: p5.Vector[][];
 
 	let invalidateSketch: (...args: Array<number | boolean>) => void;
-	// let setAmplitude: (amplitude: number) => void;
-	// let setTriMode: (triMode: boolean) => void;
+
 	let color1: p5.Color; // Dark blue
 	let color2: p5.Color; // Light blue
 
@@ -33,12 +31,6 @@
 
 		color1 = p.color(0, 0, 0); // Dark blue
 		color2 = p.color(0, 160, 100); // Light blue
-
-		// setAmplitude = () => {
-		// 	lines = createLines(p);
-		// };
-
-		// setTriMode;
 
 		heightCutOff = 7;
 
@@ -81,8 +73,6 @@
 			let startEndCutOff = (i * (heightCut * p.width)) / p.height;
 			let startEndCutOff2 = heightCut2 * p.width;
 			let amplitudeScale = amp * p.width;
-
-			// console.log(useTriangularMode);
 
 			let cutOffMode = useTriangularMode ? startEndCutOff : startEndCutOff2;
 
@@ -154,9 +144,9 @@
 		/>
 	</div>
 </div>
-<div class="flex justify-center space-x-2">
+<!-- <div class="flex justify-center space-x-2">
 	<input id="nativeColorPicker1" type="color" bind:value={color} />
-</div>
+</div> -->
 
 <div class="flex items-center">
 	<input
