@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	import HeaderItem from './HeaderItem.svelte';
 </script>
@@ -13,19 +14,19 @@
 		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+				<a href="{base}/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/fractal_lines' ? 'page' : undefined}>
-				<a href="/fractal_lines">Fractal Lines</a>
+			<li aria-current={$page.url.pathname === base + 'fractal_lines' ? 'page' : undefined}>
+				<a href="{base}fractal_lines">Fractal Lines</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/waves') ? 'page' : undefined}>
-				<a href="/waves">Waves</a>
+			<li aria-current={$page.url.pathname.startsWith(base + '/waves') ? 'page' : undefined}>
+				<a href="{base}waves">Waves</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/image') ? 'page' : undefined}>
-				<a href="/image">Image</a>
+			<li aria-current={$page.url.pathname.startsWith(base + '/image') ? 'page' : undefined}>
+				<a href="{base}image">Image</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/perlin') ? 'page' : undefined}>
-				<a href="/perlin">Perlin</a>
+			<li aria-current={$page.url.pathname.startsWith(base + '/perlin') ? 'page' : undefined}>
+				<a href="{base}perlin">Perlin</a>
 			</li>
 			<!-- <HeaderItem name="perlin" /> -->
 		</ul>
