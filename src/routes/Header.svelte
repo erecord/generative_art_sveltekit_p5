@@ -18,10 +18,10 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === base + '/' ? 'page' : undefined}>
 				<a href="{base}/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === base + 'fractal_lines' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === base + '/fractal_lines' ? 'page' : undefined}>
 				<a href="{base}/fractal_lines">Fractal Lines</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith(base + '/waves') ? 'page' : undefined}>
