@@ -3,6 +3,11 @@
 	import { base } from '$app/paths';
 
 	import HeaderItem from './HeaderItem.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		console.log('Header.svelte - BASE_URL: ', base);
+	});
 </script>
 
 <header>
@@ -17,16 +22,16 @@
 				<a href="{base}/">Home</a>
 			</li>
 			<li aria-current={$page.url.pathname === base + 'fractal_lines' ? 'page' : undefined}>
-				<a href="{base}fractal_lines">Fractal Lines</a>
+				<a href="{base}/fractal_lines">Fractal Lines</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith(base + '/waves') ? 'page' : undefined}>
-				<a href="{base}waves">Waves</a>
+				<a href="{base}/waves">Waves</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith(base + '/image') ? 'page' : undefined}>
-				<a href="{base}image">Image</a>
+				<a href="{base}/image">Image</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith(base + '/perlin') ? 'page' : undefined}>
-				<a href="{base}perlin">Perlin</a>
+				<a href="{base}/perlin">Perlin</a>
 			</li>
 			<!-- <HeaderItem name="perlin" /> -->
 		</ul>
