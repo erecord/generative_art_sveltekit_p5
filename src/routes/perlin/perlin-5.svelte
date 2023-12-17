@@ -6,7 +6,7 @@
 	let inc = 0.003;
 	let xOff = 0;
 	let start = 0;
-	let sampleOffset = 5;
+	let sampleOffset = 8;
 	let modifier: number = 4;
 	let showGraph = true;
 	let shouldAdjustXOffStart = true;
